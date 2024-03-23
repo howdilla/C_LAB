@@ -1,0 +1,34 @@
+#include <iostream>
+#include <unordered_set>
+
+int main()
+{
+    /*
+    Task 1.
+    Дано N чисел, требуется выяснить, сколько среди них различных.
+
+    Входные данные
+    В первой строке дано число N – количество чисел.
+    (1 <= N <= 100000) Во второй строке даны через пробел N чисел,
+    каждое не превышает 2*109 по модулю.
+
+    Выходные данные
+    Выведите число, равное количеству различных чисел среди данных.
+    */
+
+    int N;
+    std::cin >> N;
+
+    std::unordered_set<int> numbers;
+
+    for (int i = 0; i < N; ++i) {
+        int num;
+        std::cin >> num;
+        numbers.insert(num);
+    }
+
+    std::cout << numbers.size() << std::endl;
+
+    return 0;
+
+}
